@@ -1,0 +1,10 @@
+<h1>All Created Events</h1>
+<p>All your created events will be shown in this page.</p>
+
+<% @user.created_events do |event| %>
+  <div>
+    <h2>Event: <%= event.name %></h2>
+    <p>Date: <%= event.date %></p>
+    <p>Location: <%= event.location %></p>
+  </div>
+<% end %>
