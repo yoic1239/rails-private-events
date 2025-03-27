@@ -1,0 +1,17 @@
+<h1>Create Event</h1>
+
+<%= form_with model: @event do |form| %>
+  <div>
+    <%= form.label :name, "Event Name" %>
+    <%= form.text_field :name, autofocus: true %>
+  </div>
+  <div>
+    <%= form.label :location %>
+    <%= form.text_field :location %>
+  </div>
+  <div>
+    <%= form.label :date, "Event Date" %>
+    <%= form.date_field :date, min: Date.today %>
+  </div>
+  <%= form.submit %>
+<% end %>
