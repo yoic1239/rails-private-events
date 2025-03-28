@@ -2,7 +2,7 @@
 
 <% @events.each do |event| %>
   <div>
-    <h2>Event: <%= event.name %></h2>
+    <h2>Event: <%= link_to event.name, event %></h2>
     <p>Date: <%= event.date %></p>
     <p>Location: <%= event.location %></p>
   </div>
