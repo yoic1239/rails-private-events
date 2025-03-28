@@ -5,6 +5,10 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
+  def show
+    @event = Event.find(params[:id])
+  end
+
   def new
     @event = Event.new
   end
@@ -12,7 +16,7 @@ class EventsController < ApplicationController
   def create
     @event = current_user.created_events.build(event_params)
     if @event.save
-      redirect_to event_path
+      redirect_to @event
     else
       render :new, status: :unprocessable_entity
     end
