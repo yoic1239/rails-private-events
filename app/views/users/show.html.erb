@@ -8,3 +8,14 @@
     <p>Location: <%= event.location %></p>
   </div>
 <% end %>
+
+<h1>All Attend Events</h1>
+<ol>
+<% @user.attended_events.each do |attended_event| %>
+  <div>
+    <h2>Event: <%= attended_event.name %></h2>
+    <p>Date: <%= attended_event.date %></p>
+    <p>Location: <%= attended_event.location %></p>
+  </div>
+<% end %>
+</ol>
