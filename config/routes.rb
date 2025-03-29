@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [ :show ]
   resources :events, only: [ :index, :new, :create, :show ]
+  resources :event_attendances, only: [ :create ]
 
   root "events#index"
 end
