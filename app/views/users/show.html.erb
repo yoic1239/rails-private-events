@@ -1,7 +1,7 @@
 <h1>All Created Events</h1>
-<p>All your created events will be shown in this page.</p>
+<p>All events created by <%= @user.username %> are shown below.</p>
 
-<% @user.created_events do |event| %>
+<% @user.created_events.each do |event| %>
   <div>
     <h2>Event: <%= event.name %></h2>
     <p>Date: <%= event.date %></p>
