@@ -16,4 +16,11 @@
   <%else%>
     <p>You have already registered for this event.</p>
   <% end %>
+
+  <h2>List of Attendees</h2>
+  <ol>
+    <% @event.attendees.each do |attendee| %>
+      <li> <%= attendee.username %></li>
+    <% end %>
+  </ol>
 <% end %>
